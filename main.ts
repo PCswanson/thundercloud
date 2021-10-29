@@ -15,6 +15,15 @@ function sunrise () {
         haloring.show()
         basic.pause(200)
     }
+    bluesky()
+}
+function green () {
+    ring1.showColor(neopixel.colors(NeoPixelColors.Green))
+    ring2.showColor(neopixel.colors(NeoPixelColors.Green))
+    strip.showColor(neopixel.colors(NeoPixelColors.Green))
+    strip.show()
+    ring1.show()
+    ring2.show()
 }
 function thunderstorm () {
     ring1.showColor(neopixel.colors(NeoPixelColors.White))
@@ -56,6 +65,14 @@ function danceParty () {
     }
     bluesky()
 }
+function off () {
+    ring1.showColor(neopixel.colors(NeoPixelColors.Black))
+    ring2.showColor(neopixel.colors(NeoPixelColors.Black))
+    strip.showColor(neopixel.colors(NeoPixelColors.Black))
+    strip.show()
+    ring1.show()
+    ring2.show()
+}
 function sunset () {
 	
 }
@@ -67,10 +84,22 @@ radio.onReceivedString(function (receivedString) {
         thunderstorm()
     } else if (receivedString == "sunrise") {
         sunrise()
+    } else if (receivedString == "danceparty") {
+        danceParty()
+    } else if (receivedString == "red") {
+        red()
+    } else if (receivedString == "blue") {
+        blue()
+    } else if (receivedString == "off") {
+        off()
+    } else if (receivedString == "orange") {
+        orange()
+    } else if (receivedString == "violet") {
+        violet()
+    } else if (receivedString == "green") {
+        green()
     } else {
-        if (receivedString == "danceparty") {
-            danceParty()
-        }
+    	
     }
 })
 input.onButtonPressed(Button.B, function () {
@@ -81,6 +110,38 @@ function bluesky () {
     haloring.showColor(neopixel.colors(NeoPixelColors.Blue))
     extentionRing.show()
     haloring.show()
+}
+function orange () {
+    ring1.showColor(neopixel.colors(NeoPixelColors.Orange))
+    ring2.showColor(neopixel.colors(NeoPixelColors.Orange))
+    strip.showColor(neopixel.colors(NeoPixelColors.Orange))
+    strip.show()
+    ring1.show()
+    ring2.show()
+}
+function blue () {
+    ring1.showColor(neopixel.colors(NeoPixelColors.Blue))
+    ring2.showColor(neopixel.colors(NeoPixelColors.Blue))
+    strip.showColor(neopixel.colors(NeoPixelColors.Blue))
+    strip.show()
+    ring1.show()
+    ring2.show()
+}
+function red () {
+    ring1.showColor(neopixel.colors(NeoPixelColors.Red))
+    ring2.showColor(neopixel.colors(NeoPixelColors.Red))
+    strip.showColor(neopixel.colors(NeoPixelColors.Red))
+    strip.show()
+    ring1.show()
+    ring2.show()
+}
+function violet () {
+    ring1.showColor(neopixel.colors(NeoPixelColors.Violet))
+    ring2.showColor(neopixel.colors(NeoPixelColors.Violet))
+    strip.showColor(neopixel.colors(NeoPixelColors.Violet))
+    strip.show()
+    ring1.show()
+    ring2.show()
 }
 let down = 0
 let strip: neopixel.Strip = null
