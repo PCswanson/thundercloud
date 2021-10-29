@@ -59,8 +59,9 @@ function danceParty () {
         ring1.rotate(1)
         ring2.rotate(1)
         strip.rotate(1)
-        extentionRing.show()
-        haloring.show()
+        ring1.show()
+        ring2.show()
+        strip.show()
         basic.pause(25)
     }
     bluesky()
